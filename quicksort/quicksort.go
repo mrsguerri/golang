@@ -20,7 +20,7 @@ func Quicksort(array []int, start, end int) []int {
 			j--
 		}
 
-		if i <= j {
+		if i < j {
 			array[i], array[j] = array[j], array[i]
 			i++
 			j--
