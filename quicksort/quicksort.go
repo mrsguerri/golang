@@ -11,12 +11,12 @@ func Quicksort(array []int, start, end int) []int {
 	fmt.Println(array, "start ", start, "end ", end, "pivot ", pivot)
 
 	var i, j int = start, end
-	for ; i <= j; i, j = i+1, j-1 {
-		for array[i] < pivot {
+	for ; i <= j ; {
+		for i < end && array[i] < pivot {
 			i++
 		}
 
-		for array[j] > pivot {
+		for j > start && array[j] > pivot {
 			j--
 		}
 
@@ -27,15 +27,13 @@ func Quicksort(array []int, start, end int) []int {
 		}
 	}
 
-	fmt.Println("start ", start, " end ", end, " i ", i, " j ", j)
-
 	if start < j {
 		fmt.Println("left")
-		array = Quicksort(array, start, j)
+		Quicksort(array, start, j)
 	}
 	if i < end {
 		fmt.Println("right")
-		array = Quicksort(array, i, end)
+		Quicksort(array, i, end)
 	}
 
 	return array
