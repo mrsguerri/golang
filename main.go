@@ -25,7 +25,7 @@ func main() {
 	fmt.Println(input)
 
 	fmt.Println("quicksort")
-	sorted := quicksort.Quicksort(input, 0, len(input))
+	sorted := quicksort.Quicksort(input, 0, len(input) - 1)
 	fmt.Println(sorted)
 }
 
