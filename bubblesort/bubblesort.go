@@ -1,5 +1,12 @@
 package bubblesort
 
+//Steps for bubblesort:
+//1.  Iterate through the input array looking at two elements at a time
+//2.  If the two elements are not in order, swap them
+//3.  Continue this process until no swaps are made.  The array is then in order.
+
+//Time: O(n^2)
+//Space: O(1), it's in-situ
 func Bubblesort(array []int, start, end int) []int{
 	
 	var swap bool
