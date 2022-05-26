@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"practice/bubblesort"
 	"practice/quicksort"
 )
 
@@ -20,13 +21,12 @@ func main() {
 
 	//stylistically preferred
 	input := []int{7, 1, 9, 3, 2}
-
-	fmt.Println("Pre-sorted array")
-	fmt.Println(input)
-
-	fmt.Println("quicksort")
 	sorted := quicksort.Quicksort(input, 0, len(input) - 1)
-	fmt.Println(sorted)
+	fmt.Println("quicksort:", sorted)
+
+	input = []int{9, 2, 6, 1, 2}
+	sorted = bubblesort.Bubblesort(input, 0, len(input) -1)
+	fmt.Println("bubblesort:", sorted)
 }
 
 //https://go.dev/tour/flowcontrol/1
